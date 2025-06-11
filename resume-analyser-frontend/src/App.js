@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import ResumeUpload from './ResumeUpload';
+import ResumeUpload from './components/resume_upload';
 import './App.css'; // Optional: for your own styles
 
 function App() {
