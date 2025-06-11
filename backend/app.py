@@ -1,14 +1,13 @@
-# app.py (backend main file)
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from resume_parser import ResumeParser
 from matcher import match_jobs
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # allow all origins
 
 @app.route('/upload', methods=['POST'])
-def upload_resume():
+def upload():
     if 'resume' not in request.files:
         return jsonify({"error": "No file uploaded"}), 400
 
@@ -23,5 +22,5 @@ def upload_resume():
         "matched_jobs": matches
     })
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
