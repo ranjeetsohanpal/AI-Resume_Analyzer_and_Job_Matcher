@@ -1,24 +1,24 @@
 import React from 'react';
 
-const Results = ({ result }) => {
+function Results({ result }) {
   if (!result) return null;
 
   return (
-    <div className="results-container">
-      <h3>Hello, {result.name}</h3>
-      <h4>Extracted Skills:</h4>
-      <ul>{result.skills.map(skill => <li key={skill}>{skill}</li>)}</ul>
+    <div className="mt-4">
+      <h3 className="text-lg font-semibold">Hi, {result.name}</h3>
+      <p><strong>Skills:</strong> {result.skills.join(', ')}</p>
 
-      <h4>Matching Jobs:</h4>
-      {result.matched_jobs.map((job, idx) => (
-        <div key={idx}>
-          <strong>{job.title}</strong>
-          <p>Match: {job.score}%</p>
-          <p>Missing Skills: {job.missing_skills.join(", ")}</p>
-        </div>
-      ))}
+      <h4 className="mt-2 font-semibold">Top Job Matches:</h4>
+      <ul className="list-disc pl-5">
+        {result.matched_jobs.map((job, idx) => (
+          <li key={idx} className="mb-2">
+            <strong>{job.title}</strong> - Match Score: {job.score}%<br />
+            <span>Missing Skills: {job.missing_skills.length > 0 ? job.missing_skills.join(', ') : 'None'}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-};
+}
 
 export default Results;

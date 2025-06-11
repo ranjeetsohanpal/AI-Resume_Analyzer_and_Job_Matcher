@@ -1,39 +1,53 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import Results from './results';
 
-const ResumeUpload = ({ setResult }) => {
+function ResumeUpload() {
   const [file, setFile] = useState(null);
+  const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleUpload = async (e) => {
     e.preventDefault();
     if (!file) return;
 
+    setLoading(true);
     const formData = new FormData();
-    formData.append("resume", file);
+    formData.append('resume', file);
 
     try {
-      setLoading(true);
-      const response = await axios.post("http://localhost:5000/upload", formData);
-      setResult(response.data);
-      setLoading(false);
-    } catch (err) {
-      console.error(err);
-      alert("Upload failed");
+      const res = await fetch('http://localhost:5000/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await res.json();
+      setResult(data);
+    } catch (error) {
+      console.error('Upload failed:', error);
+      alert('Failed to upload resume. Please try again.');
+    } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="upload-container">
-      <h2>Upload Your Resume (.pdf)</h2>
+    <div className="p-4 max-w-xl mx-auto">
+      <h2 className="text-xl font-bold mb-2">Upload Your Resume (PDF)</h2>
       <form onSubmit={handleUpload}>
-        <input type="file" accept=".pdf" onChange={(e) => setFile(e.target.files[0])} />
-        <button type="submit">Analyze Resume</button>
+        <input
+          type="file"
+          accept="application/pdf"
+          onChange={(e) => setFile(e.target.files[0])}
+          required
+        />
+        <button type="submit" className="ml-2 bg-blue-500 text-white px-4 py-1 rounded">
+          {loading ? 'Uploading...' : 'Upload'}
+        </button>
       </form>
-      {loading && <p>Analyzing...</p>}
+
+      <Results result={result} />
     </div>
   );
-};
+}
 
 export default ResumeUpload;
