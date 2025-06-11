@@ -1,0 +1,61 @@
+{
+  "contact_info": {
+    "name": "Ranjeet Singh",
+    "email": "sohanpalranjeet@gmail.com",
+    "phone": null,
+    "address": null,
+    "linkedin": "https://www.linkedin.com/in/ranjeetsinghiitrpr/",
+    "github": "https://github.com/ranjeetsohanpal",
+    "portfolio": null,
+    "other_links": [
+      "https://github.com/ranjeetsohanpal/Dr-Green---Plant-Disease-Detection",
+      "https://github.com/ranjeetsohanpal/book-recommendation-system",
+      "https://github.com/ranjeetsohanpal/laptop-price-prediction",
+      "https://github.com/ranjeetsohanpal/your-repo-link"
+    ]
+  },
+  "skills": [
+    "python",
+    "c++",
+    "go",
+    "r",
+    "matlab",
+    "sql",
+    "html",
+    "css",
+    "react",
+    "django",
+    "flask",
+    "bootstrap",
+    "tensorflow",
+    "pytorch",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "git",
+    "bash"
+  ],
+  "education": [
+    {
+      "degree": "B.Tech in Electrical Engineering",
+      "institution": "• Indian Institute of Technology, Ropar",
+      "year": "Dec 2021 - May 2025",
+      "gpa": "CGPA: 7.92/10.00"
+    }
+  ],
+  "experience": [
+    {
+      "title": "May 2024 - July 2024",
+      "company": null,
+      "duration": "May 2024 - July 2024",
+      "description": null
+    },
+    {
+      "title": "Data Science Intern",
+      "company": null,
+      "duration": null,
+      "description": null
+    }
+  ],
+  "summary": "Analytical and detail-oriented aspiring Data Scientist with a solid foundation in Python, SQL, and Power BI, seeking a full-time opportunity in data-driven roles. Experienced in building machine learning models, developing data pipelines, and creating actionable visualizations. Passionate about turning complex data into clear insights and eager to contribute to innovative solutions in data science and analytics."
+}

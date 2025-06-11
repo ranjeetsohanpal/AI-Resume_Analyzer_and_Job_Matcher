@@ -1,4 +1,4 @@
-import pymupdf  # PyMuPDF
+import fitz  # PyMuPDF
 import re
 import json
 from typing import Dict, List, Optional
@@ -13,6 +13,12 @@ class ContactInfo:
     address: Optional[str] = None
     linkedin: Optional[str] = None
     github: Optional[str] = None
+    portfolio: Optional[str] = None
+    other_links: List[str] = None
+
+    def __post_init__(self):
+        if self.other_links is None:
+            self.other_links = []
 
 @dataclass
 class Education:
@@ -82,7 +88,7 @@ class ResumeParser:
     def extract_text_from_pdf(self, pdf_path: str) -> str:
         """Extract text from PDF using PyMuPDF."""
         try:
-            doc = pymupdf.open(pdf_path)
+            doc = fitz.open(pdf_path)
             text = ""
             
             for page_num in range(len(doc)):
@@ -94,10 +100,100 @@ class ResumeParser:
         except Exception as e:
             raise Exception(f"Error reading PDF: {str(e)}")
 
-    def extract_contact_info(self, text: str) -> ContactInfo:
-        """Extract contact information from text."""
+    def extract_links_from_pdf(self, pdf_path: str) -> List[Dict]:
+        """Extract all links from PDF including their associated text and coordinates."""
+        try:
+            doc = fitz.open(pdf_path)
+            all_links = []
+            
+            for page_num in range(len(doc)):
+                page = doc.load_page(page_num)
+                links = page.get_links()
+                
+                for link in links:
+                    link_info = {
+                        'page': page_num,
+                        'rect': link['from'],  # coordinates
+                        'uri': link.get('uri', ''),
+                        'text': ''
+                    }
+                    
+                    # Extract text at the link coordinates
+                    rect = fitz.Rect(link['from'])
+                    # Expand rectangle slightly to capture text
+                    expanded_rect = fitz.Rect(
+                        rect.x0 - 5, rect.y0 - 5, 
+                        rect.x1 + 5, rect.y1 + 5
+                    )
+                    
+                    # Get text within the link area
+                    text_instances = page.get_text("dict", clip=expanded_rect)
+                    link_text = ""
+                    for block in text_instances.get("blocks", []):
+                        if "lines" in block:
+                            for line in block["lines"]:
+                                for span in line["spans"]:
+                                    link_text += span["text"]
+                    
+                    link_info['text'] = link_text.strip()
+                    all_links.append(link_info)
+            
+            doc.close()
+            return all_links
+        except Exception as e:
+            raise Exception(f"Error extracting links from PDF: {str(e)}")
+
+    def extract_text_and_links_from_pdf(self, pdf_path: str) -> tuple:
+        """Extract both text and links from PDF."""
+        try:
+            doc = fitz.open(pdf_path)
+            text = ""
+            all_links = []
+            
+            for page_num in range(len(doc)):
+                page = doc.load_page(page_num)
+                
+                # Extract text
+                text += page.get_text()
+                
+                # Extract links
+                links = page.get_links()
+                for link in links:
+                    link_info = {
+                        'page': page_num,
+                        'rect': link['from'],
+                        'uri': link.get('uri', ''),
+                        'text': ''
+                    }
+                    
+                    # Extract text at link coordinates
+                    rect = fitz.Rect(link['from'])
+                    expanded_rect = fitz.Rect(
+                        rect.x0 - 5, rect.y0 - 5, 
+                        rect.x1 + 5, rect.y1 + 5
+                    )
+                    
+                    text_instances = page.get_text("dict", clip=expanded_rect)
+                    link_text = ""
+                    for block in text_instances.get("blocks", []):
+                        if "lines" in block:
+                            for line in block["lines"]:
+                                for span in line["spans"]:
+                                    link_text += span["text"]
+                    
+                    link_info['text'] = link_text.strip()
+                    all_links.append(link_info)
+            
+            doc.close()
+            return text, all_links
+        except Exception as e:
+            raise Exception(f"Error reading PDF: {str(e)}")
+
+    def extract_contact_info(self, text: str, links: List[Dict] = None) -> ContactInfo:
+        """Extract contact information from text and embedded links."""
         contact = ContactInfo()
         
+        # Extract from regular text first
         # Extract email
         email_match = re.search(self.email_pattern, text, re.IGNORECASE)
         if email_match:
@@ -117,6 +213,46 @@ class ResumeParser:
         github_match = re.search(self.github_pattern, text, re.IGNORECASE)
         if github_match:
             contact.github = github_match.group()
+        
+        # Extract from embedded links
+        if links:
+            for link in links:
+                uri = link.get('uri', '').lower()
+                link_text = link.get('text', '').lower()
+                
+                # Check for email in links
+                if 'mailto:' in uri and not contact.email:
+                    contact.email = uri.replace('mailto:', '')
+                elif re.search(self.email_pattern, uri, re.IGNORECASE) and not contact.email:
+                    email_match = re.search(self.email_pattern, uri, re.IGNORECASE)
+                    contact.email = email_match.group()
+                
+                # Check for LinkedIn
+                if 'linkedin.com' in uri and not contact.linkedin:
+                    contact.linkedin = link['uri']
+                elif 'linkedin' in link_text and 'http' in uri and not contact.linkedin:
+                    contact.linkedin = link['uri']
+                
+                # Check for GitHub
+                if 'github.com' in uri and not contact.github:
+                    contact.github = link['uri']
+                elif 'github' in link_text and 'http' in uri and not contact.github:
+                    contact.github = link['uri']
+                
+                # Check for portfolio/personal websites
+                if ('portfolio' in link_text or 'website' in link_text or 
+                    link_text.strip() == '' and 'http' in uri) and not contact.portfolio:
+                    # Filter out common social media/job sites to find personal sites
+                    excluded_domains = ['linkedin', 'github', 'twitter', 'facebook', 'instagram', 
+                                      'indeed', 'glassdoor', 'monster', 'careerbuilder']
+                    if not any(domain in uri.lower() for domain in excluded_domains):
+                        contact.portfolio = link['uri']
+                
+                # Collect other professional links
+                if ('http' in uri and 
+                    uri not in [contact.linkedin, contact.github, contact.portfolio] and
+                    'mailto:' not in uri and 'tel:' not in uri):
+                    contact.other_links.append(link['uri'])
         
         # Extract name (first two words of first line, heuristic)
         lines = text.split('\n')
@@ -150,7 +286,7 @@ class ResumeParser:
         education_section = False
         current_education = None
         
-        for line in lines:
+        for i, line in enumerate(lines):
             line = line.strip()
             if not line:
                 continue
@@ -165,23 +301,47 @@ class ResumeParser:
                 education_section = False
             
             if education_section:
-                # Look for degree patterns
-                for pattern in self.degree_patterns:
-                    if re.search(pattern, line, re.IGNORECASE):
-                        if current_education:
-                            education_list.append(current_education)
-                        current_education = Education()
-                        current_education.degree = line
-                        break
+                # Look for institution names first (more specific patterns)
+                if re.search(r'\b(university|college|institute|school|iit|nit|bits)\b', line, re.IGNORECASE):
+                    if current_education:
+                        education_list.append(current_education)
+                    current_education = Education()
+                    current_education.institution = line
+                    
+                    # Look for date range in the same line
+                    date_match = re.search(r'\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*\s+\d{4}\s*-\s*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)?\w*\s*\d{4}\b', line, re.IGNORECASE)
+                    if not date_match:
+                        date_match = re.search(r'\b\d{4}\s*-\s*\d{4}\b', line)
+                    if date_match:
+                        current_education.year = date_match.group()
+                    
+                    # Look for degree in the next line
+                    if i + 1 < len(lines):
+                        next_line = lines[i + 1].strip()
+                        if next_line and re.search(r'\b(b\.?tech|m\.?tech|bachelor|master|b\.?sc|m\.?sc|b\.?a|m\.?a|phd|diploma|certificate)\b', next_line, re.IGNORECASE):
+                            current_education.degree = next_line
                 
-                # Look for years
-                year_match = re.search(r'\b(19|20)\d{2}\b', line)
-                if year_match and current_education:
+                # Look for degree patterns
+                elif re.search(r'\b(b\.?tech|m\.?tech|bachelor|master|b\.?sc|m\.?sc|b\.?a|m\.?a|phd|diploma|certificate)\b', line, re.IGNORECASE):
+                    if not current_education:
+                        current_education = Education()
+                    if not current_education.degree:
+                        current_education.degree = line
+                
+                # Look for years/dates
+                year_match = re.search(r'\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*\s+\d{4}\s*-\s*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)?\w*\s*\d{4}\b', line, re.IGNORECASE)
+                if not year_match:
+                    year_match = re.search(r'\b\d{4}\s*-\s*\d{4}\b', line)
+                if not year_match:
+                    year_match = re.search(r'\b(19|20)\d{2}\b', line)
+                    
+                if year_match and current_education and not current_education.year:
                     current_education.year = year_match.group()
                 
-                # Look for institution names (heuristic: lines with "University", "College", "Institute")
-                if re.search(r'\b(university|college|institute|school)\b', line, re.IGNORECASE) and current_education:
-                    current_education.institution = line
+                # Look for GPA/CGPA
+                gpa_match = re.search(r'\b(gpa|cgpa)\s*:?\s*(\d+\.?\d*)\s*/?\s*(\d+\.?\d*)\b', line, re.IGNORECASE)
+                if gpa_match and current_education:
+                    current_education.gpa = gpa_match.group()
         
         if current_education:
             education_list.append(current_education)
@@ -256,9 +416,10 @@ class ResumeParser:
 
     def parse_resume(self, pdf_path: str) -> ParsedResume:
         """Parse a resume PDF and extract structured information."""
-        text = self.extract_text_from_pdf(pdf_path)
+        # Extract both text and links
+        text, links = self.extract_text_and_links_from_pdf(pdf_path)
         
-        contact_info = self.extract_contact_info(text)
+        contact_info = self.extract_contact_info(text, links)
         skills = self.extract_skills(text)
         education = self.extract_education(text)
         experience = self.extract_experience(text)
@@ -272,6 +433,18 @@ class ResumeParser:
             summary=summary
         )
 
+    def print_extracted_links(self, pdf_path: str):
+        """Utility method to print all extracted links for debugging."""
+        links = self.extract_links_from_pdf(pdf_path)
+        print("=== EXTRACTED LINKS ===")
+        for i, link in enumerate(links):
+            print(f"Link {i+1}:")
+            print(f"  URI: {link['uri']}")
+            print(f"  Text: '{link['text']}'")
+            print(f"  Page: {link['page']}")
+            print(f"  Coordinates: {link['rect']}")
+            print()
+
     def save_parsed_data(self, parsed_resume: ParsedResume, output_path: str):
         """Save parsed resume data to JSON file."""
         with open(output_path, 'w', encoding='utf-8') as f:
@@ -282,7 +455,7 @@ def main():
     parser = ResumeParser()
     
     # Example usage
-    pdf_path = "sample_resume.pdf"  # Replace with actual PDF path
+    pdf_path = "Ranjeet_Singh_DataScientist.pdf"  # Replace with actual PDF path
     
     try:
         # Parse the resume
@@ -295,6 +468,9 @@ def main():
         print(f"Phone: {parsed_resume.contact_info.phone}")
         print(f"LinkedIn: {parsed_resume.contact_info.linkedin}")
         print(f"GitHub: {parsed_resume.contact_info.github}")
+        print(f"Portfolio: {parsed_resume.contact_info.portfolio}")
+        if parsed_resume.contact_info.other_links:
+            print(f"Other Links: {', '.join(parsed_resume.contact_info.other_links)}")
         
         print(f"\nSkills: {', '.join(parsed_resume.skills)}")
         
@@ -308,6 +484,10 @@ def main():
         
         if parsed_resume.summary:
             print(f"\nSummary: {parsed_resume.summary}")
+        
+        # Optional: Print all extracted links for debugging
+        print("\n" + "="*50)
+        parser.print_extracted_links(pdf_path)
         
         # Save to JSON
         output_path = "parsed_resume.json"

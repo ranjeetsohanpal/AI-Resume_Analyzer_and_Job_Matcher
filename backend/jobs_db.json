@@ -1,0 +1,1202 @@
+[
+  {
+    "title": "Embedded Systems Engineer #1",
+    "description": "We are seeking a Embedded Systems Engineer proficient in I2C, Microcontrollers, RTOS, C. Experience with C++ is a plus.",
+    "required_skills": [
+      "Assembly",
+      "C++",
+      "I2C",
+      "RTOS",
+      "Microcontrollers",
+      "C"
+    ]
+  },
+  {
+    "title": "Cloud Engineer #2",
+    "description": "We are seeking a Cloud Engineer proficient in Azure, Docker, Kubernetes, GCP. Experience with Terraform is a plus.",
+    "required_skills": [
+      "Azure",
+      "Terraform",
+      "AWS",
+      "GCP",
+      "Kubernetes",
+      "Docker"
+    ]
+  },
+  {
+    "title": "NLP Engineer #3",
+    "description": "We are seeking a NLP Engineer proficient in GPT, BERT, Transformers, Spacy. Experience with Python is a plus.",
+    "required_skills": [
+      "Transformers",
+      "Spacy",
+      "Python",
+      "NLTK",
+      "BERT",
+      "GPT"
+    ]
+  },
+  {
+    "title": "Site Reliability Engineer #4",
+    "description": "We are seeking a Site Reliability Engineer proficient in Monitoring, Prometheus, Grafana, Incident Management. Experience with AWS is a plus.",
+    "required_skills": [
+      "Grafana",
+      "Incident Management",
+      "Prometheus",
+      "AWS",
+      "Monitoring",
+      "Kubernetes"
+    ]
+  },
+  {
+    "title": "Backend Developer #5",
+    "description": "We are seeking a Backend Developer proficient in Express, Python, SQL, MongoDB. Experience with Node.js is a plus.",
+    "required_skills": [
+      "Django",
+      "Node.js",
+      "MongoDB",
+      "Python",
+      "SQL",
+      "Express"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #6",
+    "description": "We are seeking a Full Stack Developer proficient in SQL, Node.js, MongoDB, CSS. Experience with React is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Cybersecurity Analyst #7",
+    "description": "We are seeking a Cybersecurity Analyst proficient in SIEM, Network Security, Penetration Testing, Linux. Experience with Python is a plus.",
+    "required_skills": [
+      "Linux",
+      "SIEM",
+      "Firewalls",
+      "Network Security",
+      "Penetration Testing",
+      "Python"
+    ]
+  },
+  {
+    "title": "System Administrator #8",
+    "description": "We are seeking a System Administrator proficient in Windows Server, Bash, PowerShell, Networking. Experience with DNS is a plus.",
+    "required_skills": [
+      "Bash",
+      "Networking",
+      "PowerShell",
+      "Windows Server",
+      "Linux",
+      "DNS"
+    ]
+  },
+  {
+    "title": "Blockchain Developer #9",
+    "description": "We are seeking a Blockchain Developer proficient in Ethereum, Solidity, Hardhat, Smart Contracts. Experience with Truffle is a plus.",
+    "required_skills": [
+      "Truffle",
+      "Web3.js",
+      "Ethereum",
+      "Smart Contracts",
+      "Hardhat",
+      "Solidity"
+    ]
+  },
+  {
+    "title": "QA Engineer #10",
+    "description": "We are seeking a QA Engineer proficient in Postman, TestNG, JUnit, Selenium. Experience with Cypress is a plus.",
+    "required_skills": [
+      "TestNG",
+      "Selenium",
+      "Cypress",
+      "Postman",
+      "JUnit",
+      "Java"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #11",
+    "description": "We are seeking a Full Stack Developer proficient in SQL, HTML, React, CSS. Experience with MongoDB is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Cybersecurity Analyst #12",
+    "description": "We are seeking a Cybersecurity Analyst proficient in Firewalls, Network Security, SIEM, Python. Experience with Penetration Testing is a plus.",
+    "required_skills": [
+      "Linux",
+      "SIEM",
+      "Firewalls",
+      "Network Security",
+      "Penetration Testing",
+      "Python"
+    ]
+  },
+  {
+    "title": "Site Reliability Engineer #13",
+    "description": "We are seeking a Site Reliability Engineer proficient in Prometheus, Kubernetes, Grafana, AWS. Experience with Monitoring is a plus.",
+    "required_skills": [
+      "Grafana",
+      "Incident Management",
+      "Prometheus",
+      "AWS",
+      "Monitoring",
+      "Kubernetes"
+    ]
+  },
+  {
+    "title": "Mobile App Developer #14",
+    "description": "We are seeking a Mobile App Developer proficient in Swift, Java, React Native, Android SDK. Experience with Kotlin is a plus.",
+    "required_skills": [
+      "Flutter",
+      "Kotlin",
+      "Android SDK",
+      "React Native",
+      "Swift",
+      "Java"
+    ]
+  },
+  {
+    "title": "Frontend Developer #15",
+    "description": "We are seeking a Frontend Developer proficient in React, JavaScript, HTML, TypeScript. Experience with CSS is a plus.",
+    "required_skills": [
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "Redux",
+      "React",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Embedded Systems Engineer #16",
+    "description": "We are seeking a Embedded Systems Engineer proficient in C, RTOS, I2C, C++. Experience with Microcontrollers is a plus.",
+    "required_skills": [
+      "Assembly",
+      "C++",
+      "I2C",
+      "RTOS",
+      "Microcontrollers",
+      "C"
+    ]
+  },
+  {
+    "title": "Computer Vision Engineer #17",
+    "description": "We are seeking a Computer Vision Engineer proficient in Image Processing, TensorFlow, Python, Deep Learning. Experience with OpenCV is a plus.",
+    "required_skills": [
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Image Processing",
+      "Python",
+      "OpenCV"
+    ]
+  },
+  {
+    "title": "QA Engineer #18",
+    "description": "We are seeking a QA Engineer proficient in Cypress, JUnit, Java, Postman. Experience with Selenium is a plus.",
+    "required_skills": [
+      "TestNG",
+      "Selenium",
+      "Cypress",
+      "Postman",
+      "JUnit",
+      "Java"
+    ]
+  },
+  {
+    "title": "Data Scientist #19",
+    "description": "We are seeking a Data Scientist proficient in Python, TensorFlow, Pandas, Machine Learning. Experience with SQL is a plus.",
+    "required_skills": [
+      "SQL",
+      "TensorFlow",
+      "Machine Learning",
+      "Python",
+      "Scikit-learn",
+      "Pandas"
+    ]
+  },
+  {
+    "title": "Backend Developer #20",
+    "description": "We are seeking a Backend Developer proficient in Python, Express, Django, SQL. Experience with Node.js is a plus.",
+    "required_skills": [
+      "Django",
+      "Node.js",
+      "MongoDB",
+      "Python",
+      "SQL",
+      "Express"
+    ]
+  },
+  {
+    "title": "DevOps Engineer #21",
+    "description": "We are seeking a DevOps Engineer proficient in Docker, Terraform, CI/CD, Linux. Experience with Kubernetes is a plus.",
+    "required_skills": [
+      "Docker",
+      "Linux",
+      "Terraform",
+      "AWS",
+      "CI/CD",
+      "Kubernetes"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #22",
+    "description": "We are seeking a Full Stack Developer proficient in HTML, React, SQL, Node.js. Experience with MongoDB is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Game Developer #23",
+    "description": "We are seeking a Game Developer proficient in Shader Programming, Unity, Game Physics, C#. Experience with Unreal Engine is a plus.",
+    "required_skills": [
+      "Unity",
+      "Game Physics",
+      "3D Modeling",
+      "Unreal Engine",
+      "Shader Programming",
+      "C#"
+    ]
+  },
+  {
+    "title": "Blockchain Developer #24",
+    "description": "We are seeking a Blockchain Developer proficient in Web3.js, Hardhat, Truffle, Smart Contracts. Experience with Ethereum is a plus.",
+    "required_skills": [
+      "Truffle",
+      "Web3.js",
+      "Ethereum",
+      "Smart Contracts",
+      "Hardhat",
+      "Solidity"
+    ]
+  },
+  {
+    "title": "Data Scientist #25",
+    "description": "We are seeking a Data Scientist proficient in Machine Learning, Python, SQL, TensorFlow. Experience with Scikit-learn is a plus.",
+    "required_skills": [
+      "SQL",
+      "TensorFlow",
+      "Machine Learning",
+      "Python",
+      "Scikit-learn",
+      "Pandas"
+    ]
+  },
+  {
+    "title": "AI Engineer #26",
+    "description": "We are seeking a AI Engineer proficient in Computer Vision, Python, TensorFlow, Deep Learning. Experience with NLP is a plus.",
+    "required_skills": [
+      "Python",
+      "NLP",
+      "PyTorch",
+      "Deep Learning",
+      "TensorFlow",
+      "Computer Vision"
+    ]
+  },
+  {
+    "title": "Machine Learning Engineer #27",
+    "description": "We are seeking a Machine Learning Engineer proficient in Python, ML Ops, TensorFlow, Scikit-learn. Experience with Keras is a plus.",
+    "required_skills": [
+      "ML Ops",
+      "Keras",
+      "TensorFlow",
+      "Scikit-learn",
+      "PyTorch",
+      "Python"
+    ]
+  },
+  {
+    "title": "Computer Vision Engineer #28",
+    "description": "We are seeking a Computer Vision Engineer proficient in Python, TensorFlow, Deep Learning, OpenCV. Experience with Image Processing is a plus.",
+    "required_skills": [
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Image Processing",
+      "Python",
+      "OpenCV"
+    ]
+  },
+  {
+    "title": "Data Analyst #29",
+    "description": "We are seeking a Data Analyst proficient in Pandas, Power BI, Excel, SQL. Experience with Tableau is a plus.",
+    "required_skills": [
+      "Excel",
+      "Python",
+      "Power BI",
+      "Tableau",
+      "Pandas",
+      "SQL"
+    ]
+  },
+  {
+    "title": "NLP Engineer #30",
+    "description": "We are seeking a NLP Engineer proficient in Python, BERT, GPT, Spacy. Experience with Transformers is a plus.",
+    "required_skills": [
+      "Transformers",
+      "Spacy",
+      "Python",
+      "NLTK",
+      "BERT",
+      "GPT"
+    ]
+  },
+  {
+    "title": "Frontend Developer #31",
+    "description": "We are seeking a Frontend Developer proficient in Redux, TypeScript, HTML, React. Experience with JavaScript is a plus.",
+    "required_skills": [
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "Redux",
+      "React",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #32",
+    "description": "We are seeking a Full Stack Developer proficient in HTML, Node.js, MongoDB, React. Experience with SQL is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Cybersecurity Analyst #33",
+    "description": "We are seeking a Cybersecurity Analyst proficient in Penetration Testing, SIEM, Linux, Python. Experience with Network Security is a plus.",
+    "required_skills": [
+      "Linux",
+      "SIEM",
+      "Firewalls",
+      "Network Security",
+      "Penetration Testing",
+      "Python"
+    ]
+  },
+  {
+    "title": "Frontend Developer #34",
+    "description": "We are seeking a Frontend Developer proficient in JavaScript, HTML, Redux, CSS. Experience with React is a plus.",
+    "required_skills": [
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "Redux",
+      "React",
+      "CSS"
+    ]
+  },
+  {
+    "title": "DevOps Engineer #35",
+    "description": "We are seeking a DevOps Engineer proficient in Terraform, Docker, AWS, CI/CD. Experience with Kubernetes is a plus.",
+    "required_skills": [
+      "Docker",
+      "Linux",
+      "Terraform",
+      "AWS",
+      "CI/CD",
+      "Kubernetes"
+    ]
+  },
+  {
+    "title": "Data Scientist #36",
+    "description": "We are seeking a Data Scientist proficient in Python, Pandas, SQL, Machine Learning. Experience with Scikit-learn is a plus.",
+    "required_skills": [
+      "SQL",
+      "TensorFlow",
+      "Machine Learning",
+      "Python",
+      "Scikit-learn",
+      "Pandas"
+    ]
+  },
+  {
+    "title": "Game Developer #37",
+    "description": "We are seeking a Game Developer proficient in Game Physics, 3D Modeling, Unity, Unreal Engine. Experience with Shader Programming is a plus.",
+    "required_skills": [
+      "Unity",
+      "Game Physics",
+      "3D Modeling",
+      "Unreal Engine",
+      "Shader Programming",
+      "C#"
+    ]
+  },
+  {
+    "title": "Embedded Systems Engineer #38",
+    "description": "We are seeking a Embedded Systems Engineer proficient in C, RTOS, C++, I2C. Experience with Assembly is a plus.",
+    "required_skills": [
+      "Assembly",
+      "C++",
+      "I2C",
+      "RTOS",
+      "Microcontrollers",
+      "C"
+    ]
+  },
+  {
+    "title": "Cloud Engineer #39",
+    "description": "We are seeking a Cloud Engineer proficient in AWS, Docker, Kubernetes, Azure. Experience with Terraform is a plus.",
+    "required_skills": [
+      "Azure",
+      "Terraform",
+      "AWS",
+      "GCP",
+      "Kubernetes",
+      "Docker"
+    ]
+  },
+  {
+    "title": "Data Analyst #40",
+    "description": "We are seeking a Data Analyst proficient in Python, Pandas, Power BI, SQL. Experience with Tableau is a plus.",
+    "required_skills": [
+      "Excel",
+      "Python",
+      "Power BI",
+      "Tableau",
+      "Pandas",
+      "SQL"
+    ]
+  },
+  {
+    "title": "QA Engineer #41",
+    "description": "We are seeking a QA Engineer proficient in TestNG, JUnit, Selenium, Postman. Experience with Java is a plus.",
+    "required_skills": [
+      "TestNG",
+      "Selenium",
+      "Cypress",
+      "Postman",
+      "JUnit",
+      "Java"
+    ]
+  },
+  {
+    "title": "Mobile App Developer #42",
+    "description": "We are seeking a Mobile App Developer proficient in Kotlin, Android SDK, Swift, Flutter. Experience with Java is a plus.",
+    "required_skills": [
+      "Flutter",
+      "Kotlin",
+      "Android SDK",
+      "React Native",
+      "Swift",
+      "Java"
+    ]
+  },
+  {
+    "title": "Blockchain Developer #43",
+    "description": "We are seeking a Blockchain Developer proficient in Hardhat, Smart Contracts, Web3.js, Truffle. Experience with Solidity is a plus.",
+    "required_skills": [
+      "Truffle",
+      "Web3.js",
+      "Ethereum",
+      "Smart Contracts",
+      "Hardhat",
+      "Solidity"
+    ]
+  },
+  {
+    "title": "System Administrator #44",
+    "description": "We are seeking a System Administrator proficient in Bash, DNS, Linux, Networking. Experience with PowerShell is a plus.",
+    "required_skills": [
+      "Bash",
+      "Networking",
+      "PowerShell",
+      "Windows Server",
+      "Linux",
+      "DNS"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #45",
+    "description": "We are seeking a Full Stack Developer proficient in HTML, MongoDB, CSS, SQL. Experience with Node.js is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "System Administrator #46",
+    "description": "We are seeking a System Administrator proficient in Windows Server, Bash, Linux, Networking. Experience with DNS is a plus.",
+    "required_skills": [
+      "Bash",
+      "Networking",
+      "PowerShell",
+      "Windows Server",
+      "Linux",
+      "DNS"
+    ]
+  },
+  {
+    "title": "Computer Vision Engineer #47",
+    "description": "We are seeking a Computer Vision Engineer proficient in Image Processing, Deep Learning, PyTorch, Python. Experience with OpenCV is a plus.",
+    "required_skills": [
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Image Processing",
+      "Python",
+      "OpenCV"
+    ]
+  },
+  {
+    "title": "QA Engineer #48",
+    "description": "We are seeking a QA Engineer proficient in Java, TestNG, Postman, Cypress. Experience with JUnit is a plus.",
+    "required_skills": [
+      "TestNG",
+      "Selenium",
+      "Cypress",
+      "Postman",
+      "JUnit",
+      "Java"
+    ]
+  },
+  {
+    "title": "Data Scientist #49",
+    "description": "We are seeking a Data Scientist proficient in Python, Scikit-learn, TensorFlow, Machine Learning. Experience with SQL is a plus.",
+    "required_skills": [
+      "SQL",
+      "TensorFlow",
+      "Machine Learning",
+      "Python",
+      "Scikit-learn",
+      "Pandas"
+    ]
+  },
+  {
+    "title": "System Administrator #50",
+    "description": "We are seeking a System Administrator proficient in Windows Server, DNS, Linux, PowerShell. Experience with Bash is a plus.",
+    "required_skills": [
+      "Bash",
+      "Networking",
+      "PowerShell",
+      "Windows Server",
+      "Linux",
+      "DNS"
+    ]
+  },
+  {
+    "title": "Big Data Engineer #51",
+    "description": "We are seeking a Big Data Engineer proficient in Scala, Hive, Python, Kafka. Experience with Spark is a plus.",
+    "required_skills": [
+      "Spark",
+      "Scala",
+      "Hadoop",
+      "Python",
+      "Hive",
+      "Kafka"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #52",
+    "description": "We are seeking a Full Stack Developer proficient in MongoDB, SQL, HTML, Node.js. Experience with React is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "QA Engineer #53",
+    "description": "We are seeking a QA Engineer proficient in JUnit, Java, TestNG, Postman. Experience with Cypress is a plus.",
+    "required_skills": [
+      "TestNG",
+      "Selenium",
+      "Cypress",
+      "Postman",
+      "JUnit",
+      "Java"
+    ]
+  },
+  {
+    "title": "AI Engineer #54",
+    "description": "We are seeking a AI Engineer proficient in Deep Learning, Computer Vision, NLP, Python. Experience with PyTorch is a plus.",
+    "required_skills": [
+      "Python",
+      "NLP",
+      "PyTorch",
+      "Deep Learning",
+      "TensorFlow",
+      "Computer Vision"
+    ]
+  },
+  {
+    "title": "DevOps Engineer #55",
+    "description": "We are seeking a DevOps Engineer proficient in Kubernetes, Linux, CI/CD, Terraform. Experience with AWS is a plus.",
+    "required_skills": [
+      "Docker",
+      "Linux",
+      "Terraform",
+      "AWS",
+      "CI/CD",
+      "Kubernetes"
+    ]
+  },
+  {
+    "title": "Site Reliability Engineer #56",
+    "description": "We are seeking a Site Reliability Engineer proficient in Monitoring, AWS, Kubernetes, Prometheus. Experience with Incident Management is a plus.",
+    "required_skills": [
+      "Grafana",
+      "Incident Management",
+      "Prometheus",
+      "AWS",
+      "Monitoring",
+      "Kubernetes"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #57",
+    "description": "We are seeking a Full Stack Developer proficient in HTML, MongoDB, SQL, React. Experience with Node.js is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "DevOps Engineer #58",
+    "description": "We are seeking a DevOps Engineer proficient in Docker, Linux, Terraform, AWS. Experience with CI/CD is a plus.",
+    "required_skills": [
+      "Docker",
+      "Linux",
+      "Terraform",
+      "AWS",
+      "CI/CD",
+      "Kubernetes"
+    ]
+  },
+  {
+    "title": "System Administrator #59",
+    "description": "We are seeking a System Administrator proficient in DNS, Networking, Linux, Windows Server. Experience with PowerShell is a plus.",
+    "required_skills": [
+      "Bash",
+      "Networking",
+      "PowerShell",
+      "Windows Server",
+      "Linux",
+      "DNS"
+    ]
+  },
+  {
+    "title": "Mobile App Developer #60",
+    "description": "We are seeking a Mobile App Developer proficient in Swift, React Native, Flutter, Java. Experience with Kotlin is a plus.",
+    "required_skills": [
+      "Flutter",
+      "Kotlin",
+      "Android SDK",
+      "React Native",
+      "Swift",
+      "Java"
+    ]
+  },
+  {
+    "title": "Embedded Systems Engineer #61",
+    "description": "We are seeking a Embedded Systems Engineer proficient in Assembly, Microcontrollers, C++, RTOS. Experience with C is a plus.",
+    "required_skills": [
+      "Assembly",
+      "C++",
+      "I2C",
+      "RTOS",
+      "Microcontrollers",
+      "C"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #62",
+    "description": "We are seeking a Full Stack Developer proficient in SQL, React, MongoDB, HTML. Experience with Node.js is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Data Analyst #63",
+    "description": "We are seeking a Data Analyst proficient in Excel, Pandas, Power BI, SQL. Experience with Tableau is a plus.",
+    "required_skills": [
+      "Excel",
+      "Python",
+      "Power BI",
+      "Tableau",
+      "Pandas",
+      "SQL"
+    ]
+  },
+  {
+    "title": "Blockchain Developer #64",
+    "description": "We are seeking a Blockchain Developer proficient in Truffle, Hardhat, Ethereum, Solidity. Experience with Web3.js is a plus.",
+    "required_skills": [
+      "Truffle",
+      "Web3.js",
+      "Ethereum",
+      "Smart Contracts",
+      "Hardhat",
+      "Solidity"
+    ]
+  },
+  {
+    "title": "Mobile App Developer #65",
+    "description": "We are seeking a Mobile App Developer proficient in React Native, Android SDK, Java, Flutter. Experience with Swift is a plus.",
+    "required_skills": [
+      "Flutter",
+      "Kotlin",
+      "Android SDK",
+      "React Native",
+      "Swift",
+      "Java"
+    ]
+  },
+  {
+    "title": "Backend Developer #66",
+    "description": "We are seeking a Backend Developer proficient in Express, Django, SQL, Python. Experience with Node.js is a plus.",
+    "required_skills": [
+      "Django",
+      "Node.js",
+      "MongoDB",
+      "Python",
+      "SQL",
+      "Express"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #67",
+    "description": "We are seeking a Full Stack Developer proficient in Node.js, CSS, SQL, MongoDB. Experience with React is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Cybersecurity Analyst #68",
+    "description": "We are seeking a Cybersecurity Analyst proficient in Python, SIEM, Firewalls, Penetration Testing. Experience with Linux is a plus.",
+    "required_skills": [
+      "Linux",
+      "SIEM",
+      "Firewalls",
+      "Network Security",
+      "Penetration Testing",
+      "Python"
+    ]
+  },
+  {
+    "title": "Computer Vision Engineer #69",
+    "description": "We are seeking a Computer Vision Engineer proficient in OpenCV, TensorFlow, Deep Learning, PyTorch. Experience with Image Processing is a plus.",
+    "required_skills": [
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Image Processing",
+      "Python",
+      "OpenCV"
+    ]
+  },
+  {
+    "title": "Data Analyst #70",
+    "description": "We are seeking a Data Analyst proficient in Python, Tableau, Pandas, Power BI. Experience with Excel is a plus.",
+    "required_skills": [
+      "Excel",
+      "Python",
+      "Power BI",
+      "Tableau",
+      "Pandas",
+      "SQL"
+    ]
+  },
+  {
+    "title": "Game Developer #71",
+    "description": "We are seeking a Game Developer proficient in Shader Programming, Unreal Engine, Unity, Game Physics. Experience with 3D Modeling is a plus.",
+    "required_skills": [
+      "Unity",
+      "Game Physics",
+      "3D Modeling",
+      "Unreal Engine",
+      "Shader Programming",
+      "C#"
+    ]
+  },
+  {
+    "title": "Game Developer #72",
+    "description": "We are seeking a Game Developer proficient in Unity, Game Physics, 3D Modeling, Unreal Engine. Experience with Shader Programming is a plus.",
+    "required_skills": [
+      "Unity",
+      "Game Physics",
+      "3D Modeling",
+      "Unreal Engine",
+      "Shader Programming",
+      "C#"
+    ]
+  },
+  {
+    "title": "NLP Engineer #73",
+    "description": "We are seeking a NLP Engineer proficient in Transformers, Spacy, Python, NLTK. Experience with BERT is a plus.",
+    "required_skills": [
+      "Transformers",
+      "Spacy",
+      "Python",
+      "NLTK",
+      "BERT",
+      "GPT"
+    ]
+  },
+  {
+    "title": "Big Data Engineer #74",
+    "description": "We are seeking a Big Data Engineer proficient in Python, Kafka, Scala, Spark. Experience with Hive is a plus.",
+    "required_skills": [
+      "Spark",
+      "Scala",
+      "Hadoop",
+      "Python",
+      "Hive",
+      "Kafka"
+    ]
+  },
+  {
+    "title": "Mobile App Developer #75",
+    "description": "We are seeking a Mobile App Developer proficient in Kotlin, Flutter, Java, React Native. Experience with Android SDK is a plus.",
+    "required_skills": [
+      "Flutter",
+      "Kotlin",
+      "Android SDK",
+      "React Native",
+      "Swift",
+      "Java"
+    ]
+  },
+  {
+    "title": "Big Data Engineer #76",
+    "description": "We are seeking a Big Data Engineer proficient in Scala, Python, Kafka, Hive. Experience with Spark is a plus.",
+    "required_skills": [
+      "Spark",
+      "Scala",
+      "Hadoop",
+      "Python",
+      "Hive",
+      "Kafka"
+    ]
+  },
+  {
+    "title": "System Administrator #77",
+    "description": "We are seeking a System Administrator proficient in Bash, Networking, PowerShell, Windows Server. Experience with Linux is a plus.",
+    "required_skills": [
+      "Bash",
+      "Networking",
+      "PowerShell",
+      "Windows Server",
+      "Linux",
+      "DNS"
+    ]
+  },
+  {
+    "title": "Cloud Engineer #78",
+    "description": "We are seeking a Cloud Engineer proficient in AWS, Kubernetes, Azure, GCP. Experience with Terraform is a plus.",
+    "required_skills": [
+      "Azure",
+      "Terraform",
+      "AWS",
+      "GCP",
+      "Kubernetes",
+      "Docker"
+    ]
+  },
+  {
+    "title": "Big Data Engineer #79",
+    "description": "We are seeking a Big Data Engineer proficient in Spark, Scala, Hadoop, Python. Experience with Hive is a plus.",
+    "required_skills": [
+      "Spark",
+      "Scala",
+      "Hadoop",
+      "Python",
+      "Hive",
+      "Kafka"
+    ]
+  },
+  {
+    "title": "Mobile App Developer #80",
+    "description": "We are seeking a Mobile App Developer proficient in Java, Kotlin, Swift, Android SDK. Experience with React Native is a plus.",
+    "required_skills": [
+      "Flutter",
+      "Kotlin",
+      "Android SDK",
+      "React Native",
+      "Swift",
+      "Java"
+    ]
+  },
+  {
+    "title": "Blockchain Developer #81",
+    "description": "We are seeking a Blockchain Developer proficient in Hardhat, Ethereum, Solidity, Truffle. Experience with Smart Contracts is a plus.",
+    "required_skills": [
+      "Truffle",
+      "Web3.js",
+      "Ethereum",
+      "Smart Contracts",
+      "Hardhat",
+      "Solidity"
+    ]
+  },
+  {
+    "title": "AI Engineer #82",
+    "description": "We are seeking a AI Engineer proficient in Python, NLP, PyTorch, Deep Learning. Experience with TensorFlow is a plus.",
+    "required_skills": [
+      "Python",
+      "NLP",
+      "PyTorch",
+      "Deep Learning",
+      "TensorFlow",
+      "Computer Vision"
+    ]
+  },
+  {
+    "title": "Site Reliability Engineer #83",
+    "description": "We are seeking a Site Reliability Engineer proficient in Grafana, Incident Management, Prometheus, AWS. Experience with Monitoring is a plus.",
+    "required_skills": [
+      "Grafana",
+      "Incident Management",
+      "Prometheus",
+      "AWS",
+      "Monitoring",
+      "Kubernetes"
+    ]
+  },
+  {
+    "title": "Cloud Engineer #84",
+    "description": "We are seeking a Cloud Engineer proficient in Azure, Terraform, AWS, GCP. Experience with Kubernetes is a plus.",
+    "required_skills": [
+      "Azure",
+      "Terraform",
+      "AWS",
+      "GCP",
+      "Kubernetes",
+      "Docker"
+    ]
+  },
+  {
+    "title": "Backend Developer #85",
+    "description": "We are seeking a Backend Developer proficient in MongoDB, Node.js, Python, Django. Experience with SQL is a plus.",
+    "required_skills": [
+      "Django",
+      "Node.js",
+      "MongoDB",
+      "Python",
+      "SQL",
+      "Express"
+    ]
+  },
+  {
+    "title": "Data Scientist #86",
+    "description": "We are seeking a Data Scientist proficient in Pandas, TensorFlow, SQL, Machine Learning. Experience with Scikit-learn is a plus.",
+    "required_skills": [
+      "SQL",
+      "TensorFlow",
+      "Machine Learning",
+      "Python",
+      "Scikit-learn",
+      "Pandas"
+    ]
+  },
+  {
+    "title": "Full Stack Developer #87",
+    "description": "We are seeking a Full Stack Developer proficient in MongoDB, HTML, React, SQL. Experience with Node.js is a plus.",
+    "required_skills": [
+      "MongoDB",
+      "HTML",
+      "React",
+      "SQL",
+      "Node.js",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Computer Vision Engineer #88",
+    "description": "We are seeking a Computer Vision Engineer proficient in Deep Learning, TensorFlow, PyTorch, Image Processing. Experience with Python is a plus.",
+    "required_skills": [
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Image Processing",
+      "Python",
+      "OpenCV"
+    ]
+  },
+  {
+    "title": "Machine Learning Engineer #89",
+    "description": "We are seeking a Machine Learning Engineer proficient in PyTorch, Scikit-learn, Python, TensorFlow. Experience with ML Ops is a plus.",
+    "required_skills": [
+      "ML Ops",
+      "Keras",
+      "TensorFlow",
+      "Scikit-learn",
+      "PyTorch",
+      "Python"
+    ]
+  },
+  {
+    "title": "Backend Developer #90",
+    "description": "We are seeking a Backend Developer proficient in Django, Node.js, MongoDB, Python. Experience with SQL is a plus.",
+    "required_skills": [
+      "Django",
+      "Node.js",
+      "MongoDB",
+      "Python",
+      "SQL",
+      "Express"
+    ]
+  },
+  {
+    "title": "Cybersecurity Analyst #91",
+    "description": "We are seeking a Cybersecurity Analyst proficient in Linux, SIEM, Firewalls, Network Security. Experience with Penetration Testing is a plus.",
+    "required_skills": [
+      "Linux",
+      "SIEM",
+      "Firewalls",
+      "Network Security",
+      "Penetration Testing",
+      "Python"
+    ]
+  },
+  {
+    "title": "Blockchain Developer #92",
+    "description": "We are seeking a Blockchain Developer proficient in Truffle, Web3.js, Ethereum, Smart Contracts. Experience with Hardhat is a plus.",
+    "required_skills": [
+      "Truffle",
+      "Web3.js",
+      "Ethereum",
+      "Smart Contracts",
+      "Hardhat",
+      "Solidity"
+    ]
+  },
+  {
+    "title": "Frontend Developer #93",
+    "description": "We are seeking a Frontend Developer proficient in JavaScript, TypeScript, HTML, Redux. Experience with React is a plus.",
+    "required_skills": [
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "Redux",
+      "React",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Embedded Systems Engineer #94",
+    "description": "We are seeking a Embedded Systems Engineer proficient in Assembly, C++, I2C, RTOS. Experience with Microcontrollers is a plus.",
+    "required_skills": [
+      "Assembly",
+      "C++",
+      "I2C",
+      "RTOS",
+      "Microcontrollers",
+      "C"
+    ]
+  },
+  {
+    "title": "Mobile App Developer #95",
+    "description": "We are seeking a Mobile App Developer proficient in Flutter, Kotlin, Android SDK, React Native. Experience with Swift is a plus.",
+    "required_skills": [
+      "Flutter",
+      "Kotlin",
+      "Android SDK",
+      "React Native",
+      "Swift",
+      "Java"
+    ]
+  },
+  {
+    "title": "Data Scientist #96",
+    "description": "We are seeking a Data Scientist proficient in Machine Learning, SQL, Python, TensorFlow. Experience with Pandas is a plus.",
+    "required_skills": [
+      "SQL",
+      "TensorFlow",
+      "Machine Learning",
+      "Python",
+      "Scikit-learn",
+      "Pandas"
+    ]
+  },
+  {
+    "title": "Machine Learning Engineer #97",
+    "description": "We are seeking a Machine Learning Engineer proficient in ML Ops, Keras, TensorFlow, Scikit-learn. Experience with PyTorch is a plus.",
+    "required_skills": [
+      "ML Ops",
+      "Keras",
+      "TensorFlow",
+      "Scikit-learn",
+      "PyTorch",
+      "Python"
+    ]
+  },
+  {
+    "title": "Data Scientist #98",
+    "description": "We are seeking a Data Scientist proficient in SQL, TensorFlow, Machine Learning, Python. Experience with Scikit-learn is a plus.",
+    "required_skills": [
+      "SQL",
+      "TensorFlow",
+      "Machine Learning",
+      "Python",
+      "Scikit-learn",
+      "Pandas"
+    ]
+  },
+  {
+    "title": "QA Engineer #99",
+    "description": "We are seeking a QA Engineer proficient in TestNG, Selenium, Cypress, Postman. Experience with JUnit is a plus.",
+    "required_skills": [
+      "TestNG",
+      "Selenium",
+      "Cypress",
+      "Postman",
+      "JUnit",
+      "Java"
+    ]
+  },
+  {
+    "title": "Data Analyst #100",
+    "description": "We are seeking a Data Analyst proficient in Excel, Python, Power BI, Tableau. Experience with Pandas is a plus.",
+    "required_skills": [
+      "Excel",
+      "Python",
+      "Power BI",
+      "Tableau",
+      "Pandas",
+      "SQL"
+    ]
+  }
+]
