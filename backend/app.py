@@ -13,7 +13,7 @@ def upload_resume():
         return jsonify({"error": "No file uploaded"}), 400
 
     file = request.files['resume']
-    parser = ResumeParser
+    parser = ResumeParser()
     parsed = parser.parse_resume(file)
     matches = match_jobs(parsed["text"], parsed["skills"])
 
