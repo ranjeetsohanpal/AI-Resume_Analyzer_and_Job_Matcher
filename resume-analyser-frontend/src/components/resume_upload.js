@@ -12,7 +12,7 @@ function ResumeUpload() {
 
     setLoading(true);
     const formData = new FormData();
-    formData.append('resume', file);
+    formData.append("resume", file);
 
     try {
       const res = await fetch('http://localhost:5000/upload', {
@@ -21,6 +21,7 @@ function ResumeUpload() {
       });
 
       const data = await res.json();
+      console.log("✅ Response from backend:", data);
       setResult(data);
     } catch (error) {
       console.error('Upload failed:', error);

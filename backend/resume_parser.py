@@ -417,6 +417,7 @@ class ResumeParser:
     def parse_resume(self, pdf_path: str) -> ParsedResume:
         """Parse a resume PDF and extract structured information."""
         # Extract both text and links
+        print(f"Parsing resume from: {pdf_path}")
         text, links = self.extract_text_and_links_from_pdf(pdf_path)
         
         contact_info = self.extract_contact_info(text, links)
