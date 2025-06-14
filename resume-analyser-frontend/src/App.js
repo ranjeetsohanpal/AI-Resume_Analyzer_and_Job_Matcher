@@ -1,5 +1,5 @@
 // App.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css'; // Optional: for your own styles
 import Results from './components/results';
 
@@ -27,7 +27,7 @@ function App() {
 
       const data = await response.json();
       console.log("✅ Backend response:", data);
-      setResult(data); // ✅ passes result to Results
+      setResult(data); // passes result to Results
     } catch (error) {
       console.error("❌ Error:", error);
     }
