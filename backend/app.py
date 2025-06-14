@@ -26,17 +26,17 @@ def upload():
 
         # Parse the resume from the file path
         parser = ResumeParser()
-        parsed = parser.parse_resume(resume_path) 
+        parsed_resume = parser.parse_resume(resume_path) 
 
         # Match jobs
-        matches = match_jobs(parsed["text"], parsed["skills"]) # from matcher.py
+        matches = match_jobs(parsed_resume)
 
         # Remove temporary file
         os.remove(resume_path)
 
         return jsonify({
-            "name": parsed["name"],
-            "skills": parsed["skills"],
+            "name": parsed_resume.contact_info.name,
+            "skills": parsed_resume.skills,
             "matched_jobs": matches
         })
 
