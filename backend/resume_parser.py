@@ -4,6 +4,7 @@ import json
 from typing import Dict, List, Optional
 from dataclasses import dataclass, asdict
 from pathlib import Path
+from matcher import match_jobs
 
 @dataclass
 class ContactInfo:
@@ -494,6 +495,14 @@ def main():
         output_path = "parsed_resume.json"
         parser.save_parsed_data(parsed_resume, output_path)
         print(f"\nParsed data saved to {output_path}")
+
+        print('Matching the resume data : ')
+        # resume_data = {
+        # "summary": parsed_resume["summary"],
+        # "skills": parsed_resume["skills"]
+        # } 
+        matched = match_jobs(parsed_resume)
+        print(matched)
         
     except Exception as e:
         print(f"Error parsing resume: {str(e)}")
