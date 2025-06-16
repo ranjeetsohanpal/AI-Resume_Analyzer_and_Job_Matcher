@@ -3,18 +3,23 @@ import React from 'react';
 function Results({ result }) {
   if (!result) return null;
 
-  const { name, skills, matched_jobs } = result;
+  const { name, skills, summary, matched_jobs } = result;
 
   return (
     <div className="mt-4">
       <h3 className="text-lg font-semibold">Hi, {name || 'Candidate'}</h3>
 
-      <p>
+      <p className="mt-2">
+        <strong>Summary:</strong>{' '}
+        {summary ? summary : 'No summary extracted'}
+      </p>
+
+      <p className="mt-2">
         <strong>Skills:</strong>{' '}
         {Array.isArray(skills) && skills.length > 0 ? skills.join(', ') : 'Not detected'}
       </p>
 
-      <h4 className="mt-2 font-semibold">Top Job Matches:</h4>
+      <h4 className="mt-4 font-semibold">Top Job Matches:</h4>
       <ul className="list-disc pl-5">
         {Array.isArray(matched_jobs) && matched_jobs.length > 0 ? (
           matched_jobs.map((job, idx) => (
