@@ -502,7 +502,7 @@ def main():
         # "skills": parsed_resume["skills"]
         # } 
         matched = match_jobs(parsed_resume)
-        print(matched)
+        print(matched['matched_jobs'])
         
     except Exception as e:
         print(f"Error parsing resume: {str(e)}")

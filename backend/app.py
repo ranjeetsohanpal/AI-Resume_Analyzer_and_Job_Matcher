@@ -37,7 +37,9 @@ def upload():
         return jsonify({
             "name": parsed_resume.contact_info.name,
             "skills": parsed_resume.skills,
-            "matched_jobs": matches
+            "summary" : parsed_resume.summary,
+            
+
         })
 
     except Exception as e:
