@@ -3,7 +3,15 @@ import React from 'react';
 function Results({ result }) {
   if (!result) return null;
 
-  const { name, skills, summary, matched_jobs } = result;
+  const {
+    name,
+    skills,
+    summary,
+    matched_job_titles,
+    sim_scores,
+    req_skills,
+    missing_skills
+  } = result;
 
   return (
     <div className="mt-4">
@@ -21,17 +29,23 @@ function Results({ result }) {
 
       <h4 className="mt-4 font-semibold">Top Job Matches:</h4>
       <ul className="list-disc pl-5">
-        {Array.isArray(matched_jobs) && matched_jobs.length > 0 ? (
-          matched_jobs.map((job, idx) => (
-            <li key={idx} className="mb-2">
-              <strong>{job.title || 'Job Title N/A'}</strong> – Match Score: {job.score ?? 'N/A'}%
-              <br />
-              <span>
-                Missing Skills:{' '}
-                {Array.isArray(job.missing_skills) && job.missing_skills.length > 0
-                  ? job.missing_skills.join(', ')
+        {Array.isArray(matched_job_titles) && matched_job_titles.length > 0 ? (
+          matched_job_titles.map((title, idx) => (
+            <li key={idx} className="mb-4">
+              <p><strong>Job Title:</strong> {title}</p>
+              <p><strong>Match Score:</strong> {sim_scores[idx]}%</p>
+              <p>
+                <strong>Required Skills:</strong>{' '}
+                {Array.isArray(req_skills[idx]) && req_skills[idx].length > 0
+                  ? req_skills[idx].join(', ')
+                  : 'N/A'}
+              </p>
+              <p>
+                <strong>Missing Skills:</strong>{' '}
+                {Array.isArray(missing_skills[idx]) && missing_skills[idx].length > 0
+                  ? missing_skills[idx].join(', ')
                   : 'None'}
-              </span>
+              </p>
             </li>
           ))
         ) : (
