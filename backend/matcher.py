@@ -12,8 +12,8 @@ def match_jobs(parsed_resume_json, top_n=3):
     Takes parsed resume (dict or JSON) and returns top matching jobs in JSON format.
     Expected keys: 'text', 'skills'
     """
-    resume_text = parsed_resume_json.summary
-    extracted_skills = parsed_resume_json.skills
+    resume_text = parsed_resume_json['summary']
+    extracted_skills = parsed_resume_json['skills']
 
     if not resume_text or not extracted_skills:
         return {"error": "Missing resume text or skills in input."}
@@ -44,3 +44,7 @@ def match_jobs(parsed_resume_json, top_n=3):
     return {
         "matched_jobs": scored_jobs[:top_n]
     }
+
+
+
+

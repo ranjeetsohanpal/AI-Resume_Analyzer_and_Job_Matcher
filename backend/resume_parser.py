@@ -462,7 +462,7 @@ def main():
     try:
         # Parse the resume
         parsed_resume = parser.parse_resume(pdf_path)
-        
+        print('type of parsed_resume :',type(parsed_resume))
         # Print results
         print("=== PARSED RESUME ===")
         print(f"Name: {parsed_resume.contact_info.name}")
@@ -489,6 +489,8 @@ def main():
         
         # Optional: Print all extracted links for debugging
         print("\n" + "="*50)
+        
+        
         parser.print_extracted_links(pdf_path)
         
         # Save to JSON
@@ -496,13 +498,11 @@ def main():
         parser.save_parsed_data(parsed_resume, output_path)
         print(f"\nParsed data saved to {output_path}")
 
-        print('Matching the resume data : ')
-        # resume_data = {
-        # "summary": parsed_resume["summary"],
-        # "skills": parsed_resume["skills"]
-        # } 
+
         matched = match_jobs(parsed_resume)
-        print(matched['matched_jobs'])
+        print('type of matched : ',type(matched))
+        print(matched)
+        
         
     except Exception as e:
         print(f"Error parsing resume: {str(e)}")

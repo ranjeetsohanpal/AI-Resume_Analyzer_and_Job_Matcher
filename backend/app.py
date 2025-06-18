@@ -28,19 +28,37 @@ def upload():
         parser = ResumeParser()
         parsed_resume = parser.parse_resume(resume_path) 
 
-        # Match jobs
-        matches = match_jobs(parsed_resume)
-
         # Remove temporary file
         os.remove(resume_path)
 
+        # Run job matcher
+        top_n = 3
+
+        parsed_dict = {
+            'summary' : parsed_resume.summary,
+            'skills' : parsed_resume.skills
+        }
+        matched = match_jobs(parsed_dict,top_n=top_n)
+        titles = []
+        scores = []
+        req_skills = []
+        missing_skills = []
+        
+        for i in range(top_n):
+            titles.append(matched['matched_jobs'][i]['title'])
+            scores.append(matched['matched_jobs'][i]['score'])
+            req_skills.append(matched['matched_jobs'][i]['required_skills'])
+            missing_skills.append(matched['matched_jobs'][i]['missing_skills'])
         return jsonify({
             "name": parsed_resume.contact_info.name,
             "skills": parsed_resume.skills,
             "summary" : parsed_resume.summary,
-            
-
-        })
+            "matched_job_titles" : titles,
+            "sim_scores" : scores,
+            "req_skills" : req_skills,
+            "missing_skills" : missing_skills
+        }) 
+        
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
