@@ -1,6 +1,6 @@
 # 🧠 AI Resume Analyzer & Job Matcher
 
-An intelligent web application that analyzes uploaded resumes, extracts skills and summaries, and recommends the top matching jobs using NLP and semantic similarity models.
+An intelligent web application that analyzes uploaded resumes, extracts skills and summaries, and compares the uploaded job description using NLP and semantic similarity models.
 
 ## 🔍 Overview
 
